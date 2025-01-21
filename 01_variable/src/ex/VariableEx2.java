@@ -89,6 +89,5 @@ public class VariableEx2 {
 		System.out.println("result4 : " + result4); //123
 		
 		
-		
 	}
 }

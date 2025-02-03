@@ -6,7 +6,7 @@ public class PrintEx {
 		
 		/* System.out
 		 * 
-		 * 1) System.out,print(출력 내용);
+		 * 1) System.out.print(출력 내용);
 		 * 
 		 * - 출력 내용을 콘솔에 출력
 		 * - 출력 완료 후 줄이 바뀌지 않음!

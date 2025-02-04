@@ -1,5 +1,7 @@
 package section02;
 
+
+// * 
 public class Student extends Person {
 	
 	private String schoolName; // 학교명

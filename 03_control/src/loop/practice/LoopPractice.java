@@ -26,7 +26,7 @@ public class LoopPractice {
 	 public void practice11() {
 		 
 		 System.out.println("------------------------------------------");
-		 
+		 int input = 0;
 		 
 		 for(int row = 1 ; row <= input ; row++) {
 			 

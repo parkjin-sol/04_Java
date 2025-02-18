@@ -69,7 +69,7 @@ public class ArrayService1 {
 	
 		
 		// 2) for문 이용
-		for(int i = 0 ; i < arr/legnth ; i++) {
+		for(int i = 0 ; i < arr.length ; i++) {
 			arr[i] = ( i+1) * 100;
 			
 		}
@@ -108,10 +108,10 @@ public class ArrayService1 {
 		
 		System.out.println("오늘의 점심 메뉴는!! : " + menus[randomNumber]);
 	}
+	
 	/**
 	 * Java 배열 사용 시 주의할 점
-	 * */
-	
+	 */
 	public void method4() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -120,29 +120,47 @@ public class ArrayService1 {
 		
 		long[] arr = new long[3];
 		
-		for(int i = 0 ; i < arr.length ; i++ ) {
+		for(int i=0 ; i<arr.length ; i++) {
+			
 			System.out.printf("arr[%d] 값 입력 : ", i);
 			arr[i] = sc.nextLong();
 		}
 		
 		// 향상된 for문
-		
-		for( long num : arr) {
+		for(long num : arr) {
 			System.out.println(num);
 		}
+		
+		
+		/* 배열 길이 이상의 index에 접근하는 경우 */
+		
+		// arr이 참조하는 배열에 존재하는 index : 0, 1, 2
+		// -> 존재하지 않는 3번 인덱스에 값 대입해보자!!
+		
+		System.out.print("arr[3]에 대입할 값 : ");
+		long input = sc.nextLong();
+		
+		arr[3] = input;
+		// ArrayIndexOutOfBoundsException: 
+		// (배열 인덱스 범위 초과 예외)
+		// Index 3 out of bounds for length 3
+		
+		// -> 자바 배열은 존재하지 않는 인덱스에 접근 불가!!
+		// -> 처음 배열이 할당될 때의 크기로 고정된다!!
+		
+		System.out.println("확인 : " + arr[3]);
 	}
 	
-	/* 배열 길이 이상의 index에 접근하는 경우 */
-	// arr이 참조하는 배열에 존재하는 index : 0, 1, 2
-	// -> 존재하지 않는 3번 인덱스에 값 대입해보자
 	
 	/**
-	 * 인원 수를 입력 받아 그 크기를 가지는 정수 배열을 선언, 할당하고
+	 * 인원 수를 입력 받아 
+	 * 그 크기를 가지는 정수 배열을 선언, 할당하고
 	 * 
 	 * 각 배열 요소에 점수를 입력 받아 저장.
 	 * 
 	 * 입력이 완료되면 합계, 평균, 최대값, 최소값 출력하기
-	 * */ 
+	 */
+	
 	
 	public void method5() {
     Scanner sc = new Scanner(System.in);
